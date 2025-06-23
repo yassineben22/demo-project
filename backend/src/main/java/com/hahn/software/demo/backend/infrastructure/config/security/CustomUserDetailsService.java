@@ -1,7 +1,7 @@
 package com.hahn.software.demo.backend.infrastructure.config.security;
 
-import com.indatacore.skyagent.ms.useraggregate.infrastructure.adapter.outbound.persistance.entity.UserEntity;
-import com.indatacore.skyagent.ms.useraggregate.infrastructure.adapter.outbound.persistance.repository.UserRepository;
+import com.hahn.software.demo.backend.infrastructure.output.persistence.entity.UserEntity;
+import com.hahn.software.demo.backend.infrastructure.output.persistence.repository.UserJpaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -16,7 +16,7 @@ import java.util.Collections;
 @RequiredArgsConstructor
 public class CustomUserDetailsService implements UserDetailsService {
 
-    private final UserRepository userRepository;
+    private final UserJpaRepository userRepository;
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
