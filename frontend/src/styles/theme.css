@@ -1,0 +1,440 @@
+/* Custom PrimeReact Theme Override */
+
+/* Global reset for full viewport */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+:root {
+  /* Primary color: #093FB4 */
+  --primary-color: #093FB4;
+  --primary-color-text: #ffffff;
+  
+  /* Secondary color: #6C757D (gray) */
+  --secondary-color: #6C757D;
+  --secondary-color-text: #ffffff;
+  
+  /* Surface colors */
+  --surface-0: #ffffff;
+  --surface-50: #f8f9fa;
+  --surface-100: #e9ecef;
+  --surface-200: #dee2e6;
+  --surface-300: #ced4da;
+  --surface-400: #adb5bd;
+  --surface-500: #6c757d;
+  --surface-600: #495057;
+  --surface-700: #343a40;
+  --surface-800: #212529;
+  --surface-900: #191c1f;
+  
+  /* Text colors */
+  --text-color: #212529;
+  --text-color-secondary: #6c757d;
+  
+  /* Border and outline */
+  --border-color: #dee2e6;
+  --border-radius: 6px;
+  
+  /* Focus state */
+  --focus-ring: 0 0 0 0.2rem rgba(9, 63, 180, 0.25);
+}
+
+/* Override PrimeReact primary button */
+.p-button {
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color-text);
+}
+
+.p-button:not(:disabled):hover {
+  background: #072e8a;
+  border-color: #072e8a;
+}
+
+.p-button:not(:disabled):active {
+  background: #062564;
+  border-color: #062564;
+}
+
+.p-button:focus {
+  box-shadow: var(--focus-ring);
+}
+
+/* Override InputText focus */
+.p-inputtext:enabled:focus {
+  outline: 0;
+  outline-offset: 0;
+  box-shadow: var(--focus-ring);
+  border-color: var(--primary-color);
+}
+
+/* Override Checkbox */
+.p-checkbox .p-checkbox-box.p-highlight {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
+  border-color: var(--primary-color);
+}
+
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus {
+  outline: 0;
+  outline-offset: 0;
+  box-shadow: var(--focus-ring);
+  border-color: var(--primary-color);
+}
+
+/* Link styling */
+.p-link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.p-link:hover {
+  color: #072e8a;
+  text-decoration: underline;
+}
+
+/* Custom auth page styles */
+.auth-background {
+  background: var(--primary-color);
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Full viewport container */
+.full-viewport {
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.auth-card {
+  background: var(--surface-0);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 3rem;
+  width: 700px !important;
+}
+
+.auth-title {
+  color: var(--text-color);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.auth-form .p-field {
+  margin-bottom: 1rem;
+}
+
+.auth-form .p-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.auth-form .p-inputtext {
+  width: 100%;
+}
+
+.auth-form .p-button {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-form .p-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-link-container {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--text-color-secondary);
+}
+
+.auth-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-link:hover {
+  color: #072e8a;
+  text-decoration: underline;
+}
+
+.remember-me-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.remember-me-container .p-checkbox {
+  margin-right: 0.5rem;
+}
+
+/* Loading and message styles */
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.p-progressspinner {
+  margin-right: 0.5rem;
+}
+
+/* Success message styling */
+.success-text {
+  color: #28a745;
+  font-weight: 500;
+}
+
+/* User info styling */
+.user-info {
+  background: linear-gradient(135deg, #093FB4 0%, #1e5cbf 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+}
+
+.user-info h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.user-info p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Form validation styles */
+.p-invalid {
+  border-color: #e24c4c !important;
+}
+
+.p-invalid:enabled:focus {
+  outline: 0;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0.2rem rgba(226, 76, 76, 0.25) !important;
+  border-color: #e24c4c !important;
+}
+
+.p-message {
+  margin: 0;
+  padding: 0.25rem 0;
+}
+
+.p-message.p-message-error {
+  color: #e24c4c;
+  font-size: 0.875rem;
+}
+
+.auth-form .p-field {
+  margin-bottom: 1rem;
+}
+
+.auth-form .p-field.has-error {
+  margin-bottom: 0.5rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+/* Required field indicator */
+.auth-form .p-field label::after {
+  content: "";
+}
+
+.auth-form .p-field label[data-required="true"]::after {
+  content: " *";
+  color: #e24c4c;
+}
+
+/* Password strength indicator styles */
+.p-password-panel {
+  padding: 1rem;
+  background: var(--surface-0);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+}
+
+.p-password-meter {
+  margin-bottom: 0.5rem;
+}
+
+.p-password-info {
+  color: var(--text-color-secondary);
+  font-size: 0.875rem;
+}
+
+/* Products page specific styles */
+.products-page {
+  background-color: var(--surface-50);
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.products-table .p-datatable-thead > tr > th {
+  background-color: var(--primary-color);
+  color: var(--primary-color-text);
+  font-weight: 600;
+  border-color: var(--primary-color);
+}
+
+.products-table .p-datatable-tbody > tr:hover {
+  background-color: var(--surface-100);
+}
+
+.product-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+.product-image-placeholder {
+  width: 50px;
+  height: 50px;
+  background-color: var(--surface-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+.product-form-dialog .p-dialog-content {
+  padding: 1.5rem;
+}
+
+.product-form-field {
+  margin-bottom: 1rem;
+}
+
+.product-form-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.product-form-field .p-inputtext,
+.product-form-field .p-inputtextarea,
+.product-form-field .p-inputnumber input {
+  width: 100%;
+}
+
+.product-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Page header styling */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.page-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* Loading state */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-color-secondary);
+}
+
+/* Error message styling */
+.error-message {
+  margin-bottom: 1rem;
+}
+
+/* Action buttons in table */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .product-form-dialog {
+    margin: 1rem;
+    width: calc(100vw - 2rem) !important;
+  }
+}
+
+.p-password-input {
+  width: 100% !important  ;
+}
