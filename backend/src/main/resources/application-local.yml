@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/sky-agent?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=GMT+1:00
+    url: jdbc:postgresql://localhost:5432/hahn_software_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=GMT+1:00
     username: postgres
     password: password
     driver-class-name: org.postgresql.Driver
@@ -11,8 +11,8 @@ spring:
     show-sql: true
 
 jwt:
-    secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
-    expiration: 86400000 # 1 day in milliseconds
+  secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+  expiration: 86400000 # 1 day in milliseconds
 
 app:
   file-storage:

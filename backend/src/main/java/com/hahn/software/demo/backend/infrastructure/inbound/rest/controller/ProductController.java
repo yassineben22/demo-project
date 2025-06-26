@@ -4,9 +4,8 @@ import com.hahn.software.demo.backend.application.port.inbound.ProductServicePor
 import com.hahn.software.demo.backend.domain.aggregate.Product;
 import com.hahn.software.demo.backend.domain.mapper.ProductDomainMapper;
 import com.hahn.software.demo.backend.infrastructure.inbound.rest.dto.request.CustomRequestBody;
-import com.hahn.software.demo.backend.infrastructure.inbound.rest.dto.request.PaginationRequest;
 import com.hahn.software.demo.backend.infrastructure.inbound.rest.dto.request.ProductRequest;
-import com.hahn.software.demo.backend.infrastructure.inbound.rest.dto.response.PagedResponse;
+import com.hahn.software.demo.backend.infrastructure.inbound.rest.dto.request.ReferenceData;
 import com.hahn.software.demo.backend.infrastructure.inbound.rest.dto.response.ProductResponse;
 import com.hahn.software.demo.backend.infrastructure.inbound.rest.dto.response.ResponseBody;
 import jakarta.validation.Valid;
@@ -157,6 +156,5 @@ public class ProductController {
                 );
 
         return ResponseEntity.ok(responseBody);
-}
     }
 }
