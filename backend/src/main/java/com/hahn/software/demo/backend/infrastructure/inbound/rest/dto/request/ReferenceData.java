@@ -22,15 +22,4 @@ public class ReferenceData implements Serializable {
 
     @NotBlank(message = "121")
     private String lang;
-
-    @NotBlank(message = "122")
-    private String channel;
-
-    private String systemVersion;
-    private String version;
-    private String customerId;
-    private String infoType;
-    private String step;
-    private String guide;
-    private String timestamp;
 }
