@@ -20,7 +20,6 @@
 3. Access the applications:
    - Frontend: Open your browser and go to `http://localhost:3000`
    - Backend API: The backend will be running on `http://localhost:8080`
-   - Database: PostgreSQL accessible on `localhost:5432`
 
 4. To stop the application, press `CTRL + C` in the terminal where Docker Compose is running.
 
@@ -56,9 +55,3 @@ docker-compose logs -f backend
 - **Backend**: Spring Boot application with PostgreSQL database
 - **Frontend**: React application with Vite build tool served by Nginx
 - **Database**: PostgreSQL with persistent volume storage
-
-## Notes
-- The backend uses a multi-stage build to compile the Maven project
-- The frontend uses Nginx to serve the built React application  
-- Database data persists in a Docker volume named `postgres_data`
-- All services communicate through a Docker network
