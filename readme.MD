@@ -1,6 +1,6 @@
 # Hahn Software Project
 
-# This project is a solution to the task assigned by Hahn Software. The application includes secure login and signup functionality, along with CRUD operations for products (with image support). The backend follows a hexagonal architecture comprising application, domain, and infrastructure layers.
+This project is a solution to the task assigned by Hahn Software. The application includes secure login and signup functionality, along with CRUD operations for products (with image support). The backend follows a hexagonal architecture comprising application, domain, and infrastructure layers.
 
 ## Prerequisites
 - Docker installed on your machine
